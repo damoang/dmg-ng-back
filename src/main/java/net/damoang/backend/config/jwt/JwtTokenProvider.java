@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe.config.jwt;
+package net.damoang.backend.config.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

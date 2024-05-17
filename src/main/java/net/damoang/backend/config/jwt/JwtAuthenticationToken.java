@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe.config.jwt;
+package net.damoang.backend.config.jwt;
 
 import java.io.Serial;
 import lombok.Getter;

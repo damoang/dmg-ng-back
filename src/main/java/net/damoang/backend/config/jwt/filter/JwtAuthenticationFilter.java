@@ -1,12 +1,12 @@
-package com.dmg.dmgngbe.config.jwt.filter;
+package net.damoang.backend.config.jwt.filter;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.dmg.dmgngbe.config.jwt.JwtAuthenticationToken;
-import com.dmg.dmgngbe.config.jwt.JwtTokenProvider;
-import com.dmg.dmgngbe.config.jwt.UserDetailsImpl;
-import com.dmg.dmgngbe.config.security.AuthoritiesConstants;
-import com.dmg.dmgngbe.config.security.NoOpAuthenficationManager;
+import net.damoang.backend.config.jwt.JwtAuthenticationToken;
+import net.damoang.backend.config.jwt.JwtTokenProvider;
+import net.damoang.backend.config.jwt.UserDetailsImpl;
+import net.damoang.backend.config.security.AuthoritiesConstants;
+import net.damoang.backend.config.security.NoOpAuthenficationManager;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

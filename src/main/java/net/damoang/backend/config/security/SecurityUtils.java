@@ -1,6 +1,6 @@
-package com.dmg.dmgngbe.config.security;
+package net.damoang.backend.config.security;
 
-import com.dmg.dmgngbe.config.jwt.JwtAuthenticationToken;
+import net.damoang.backend.config.jwt.JwtAuthenticationToken;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Collections;

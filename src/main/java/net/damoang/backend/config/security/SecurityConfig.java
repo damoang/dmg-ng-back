@@ -1,7 +1,7 @@
-package com.dmg.dmgngbe.config.security;
+package net.damoang.backend.config.security;
 
-import com.dmg.dmgngbe.config.jwt.JwtTokenProvider;
-import com.dmg.dmgngbe.config.jwt.filter.JwtAuthenticationFilter;
+import net.damoang.backend.config.jwt.JwtTokenProvider;
+import net.damoang.backend.config.jwt.filter.JwtAuthenticationFilter;
 import java.util.Arrays;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

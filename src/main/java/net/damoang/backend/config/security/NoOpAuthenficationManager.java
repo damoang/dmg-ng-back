@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe.config.security;
+package net.damoang.backend.config.security;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;

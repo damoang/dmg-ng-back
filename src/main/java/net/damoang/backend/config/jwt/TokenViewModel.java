@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe.config.jwt;
+package net.damoang.backend.config.jwt;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

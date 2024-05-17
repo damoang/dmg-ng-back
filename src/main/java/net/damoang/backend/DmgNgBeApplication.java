@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe;
+package net.damoang.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

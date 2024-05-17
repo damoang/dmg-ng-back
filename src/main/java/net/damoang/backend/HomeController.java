@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe;
+package net.damoang.backend;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

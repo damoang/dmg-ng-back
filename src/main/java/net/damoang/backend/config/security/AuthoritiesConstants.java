@@ -1,4 +1,4 @@
-package com.dmg.dmgngbe.config.security;
+package net.damoang.backend.config.security;
 
 public class AuthoritiesConstants {
 
