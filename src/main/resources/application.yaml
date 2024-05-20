@@ -1,0 +1,74 @@
+server:
+  port: 8080 # 내장 톰캣 포트번호
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: angs
+
+  # Postgresql Database 설정
+  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:63211/mydatabase
+#    username: myuser
+#    password: secret
+
+    #Mybatis 쿼리 로그 출력 설정
+    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:postgresql://localhost:63211/mydatabase  #docker 컨터이너 - 포트번호는 log에서 확인.
+    username: myuser
+    password: secret
+
+
+  # H2 Console 설정
+  h2:
+    console: # H2 DB를 웹에서 관리할 수 있는 기능
+      enabled: true           # H2 Console 사용 여부
+      path: /h2-console       # H2 Console 접속 주소
+  # H2 Database 설정
+#  datasource:
+#    driver-class-name: org.h2.Driver
+##    url: 'jdbc:h2:mem:test'   # H2 DB 연결 주소 (In-Memory Mode)
+##    url: jdbc:h2:mem:test;MODE=PostgreSQL;DATABASE_TO_UPPER=true;
+##    url: jdbc:h2:mem:test;MODE=PostgreSQL;INIT=RUNSCRIPT FROM 'classpath:testdata/data.sql';DATABASE_TO_UPPER=false;CASE_INSENSITIVE_IDENTIFIERS=true
+##    url: 'jdbc:h2:~/local'    # H2 DB 연결 주소 (Embedded Mode)
+#    username: sa           # H2 DB 접속 ID (사용자 지정)
+#    password:              # H2 DB 접속 PW (사용자 지정)
+
+
+# JPA 설정
+jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+  hibernate:
+    ddl-auto: validate      # DB 초기화 전략 (none, create, create-drop, update, validate)
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      format_sql: true      # 쿼리 로그 포맷 (정렬)
+#        show_sql: true        # 쿼리 로그 출력
+  show-sql: true
+
+# Mybatis 설정
+mybatis:
+  mapper-locations: mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: net.damoang.angs
+
+logging:
+  level:
+    com:
+      zaxxer:
+        hikari: INFO
+    javax:
+      sql:
+        DataSource: OFF
+    jdbc:
+      audit: OFF            # JDBC 트러블슈팅 경우를 제외하고는 사용 권장 X
+      resultset: OFF        # ResultSet을 포함한 모든 JDBC 호출 정보를 출력
+      resultsettable: INFO  # SQL 결과 데이터 Table형식으로 출력
+      sqlonly: OFF          # SQL만 로그만 출력
+      sqltiming: INFO       # SQL + 소요시간 출력
+      connection: OFF       # 커넥션 연결/종료 정보 출력
