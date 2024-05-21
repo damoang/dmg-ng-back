@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.damoang.angs.application.api.v1.board.dao.BoardMapper">
+    <select id="findPostAll" resultType="net.damoang.angs.application.api.v1.board.dto.BoardDTO"> <!-- DTO 매핑할지 Domain 매핑할지 미정 -->
+        /* BoardMapper.findPostAll */
+        SELECT COUNT(*) OVER() AS TOTAL_COUNT
+            , ROW_NUMBER() OVER(ORDER BY A.REG_DT DESC) AS RNO
+            , A.ID
+            , A.POST_TITLE
+            , A.CRT_DATE
+            , A.UPD_DATE
+        FROM TB_BOARD A
+        WHERE DEL_YN = 'N'
+
+        <if test="search.searchWord != null and search.searchWord != ''">
+            AND A.POST_TITLE LIKE ''||#{search.searchWord}||'%'
+        </if>
+    </select>
+</mapper>
