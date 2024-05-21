@@ -1,14 +1,19 @@
 # DAMOANG NG Backend
-## 기여방법
-1. 이슈를 확인합니다.
-2. 깃 저장소를 fork 합니다.
-3.
 
-## 컨벤션
-1. IDE는 intellij, vscode, eclipse(sts) 중에 하나를 사용하세요
-2. Tab은 Space 4개로 합니다.  
-   (IDE의 indent를 4개로 수정해 주세요)
-3. 포맷터는 prettier 설치하세요
+## 기여방법 안내
+1. 깃허브 이슈를 확인합니다.
+2. 깃 저장소를 fork 합니다.
+3. 이슈에 번호가 포함된 feature 브랜치를 생성합니다.
+4. feature 브랜치는 dev브랜치의 변경사항을 반영하여 개발 후 dev merge합니다. 
+
+예시)  
+a. 깃허브 이슈변호 3번이라면 feature-3 브랜치에서 작업.  
+b. origin dev 브랜치 변경사항 pull하고 작업중인 feature-3에 반영.  
+c. 개발완료한 feature-3 브랜치를 dev에 merge하고 push 후 PR 보냄.  
+
+## 컨벤션(진행중)
+아래 링크의 컨벤션을 참고하여 조정할 예정입니다.
+https://naver.github.io/hackday-conventions-java/#naming 
  
 ## 설정
 1. `.env.local` 파일을 `.env`로 복사합니다.
