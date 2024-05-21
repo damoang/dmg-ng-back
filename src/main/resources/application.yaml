@@ -17,9 +17,9 @@ spring:
 
     #Mybatis 쿼리 로그 출력 설정
     driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:postgresql://localhost:63211/mydatabase  #docker 컨터이너 - 포트번호는 log에서 확인.
-    username: myuser
-    password: secret
+    url: jdbc:log4jdbc:postgresql://${POSTGRES_HOST}:5432/${POSTGRES_DB}  #docker 컨터이너 - 포트번호는 log에서 확인.
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
 
 
   # H2 Console 설정
